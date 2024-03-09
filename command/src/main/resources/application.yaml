@@ -1,0 +1,31 @@
+server.port: 8042
+spring:
+   #profiles.active: local
+   application.name: command
+   datasource:
+      url: jdbc:postgresql://localhost:5432/db-command
+      username: admin
+      password: admin
+   jpa:
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+      show-sql: true
+      hibernate:
+         ddl-auto: update
+   kafka:
+      bootstrap-servers:
+      - localhost:9091
+      - localhost:9092
+      - localhost:9093
+      template:
+         default-topic: nxtlvl-default-topic
+      producer:
+         key-serializer: org.apache.kafka.common.serialization.StringSerializer
+         value-serializer: org.apache.kafka.common.serialization.StringSerializer
+   jackson:
+      locale: pt_BR
+      time-zone: GMT-03:00
+      serialization.INDENT_OUTPUT: true
+   test:
+      mockmvc.print: default
+management:
+   endpoints.web.base-path: /secure/manager

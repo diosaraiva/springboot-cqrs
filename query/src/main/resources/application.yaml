@@ -1,0 +1,33 @@
+server.port: 8043
+spring:
+   #profiles.active: local
+   application.name: query
+   output.ansi.enabled: ALWAYS
+   data:
+      mongodb:
+         host: localhost
+         port: 27017
+         database: db-query
+         authentication-database: admin
+         username: admin
+         password: admin
+   kafka:
+      bootstrap-servers:
+      - localhost:9091
+      - localhost:9092
+      - localhost:9093
+      consumer:
+         default-topic: nxtlvl-default-topic
+         group-id: nxtlvl-default-groupid
+         auto-offset-reset: earliest
+         key-serializer: org.apache.kafka.common.serialization.StringDeserializer
+         value-serializer: org.apache.kafka.common.serialization.StringDeserializer
+   jackson:
+      locale: pt_BR
+      time-zone: GMT-03:00
+      serialization.INDENT_OUTPUT: true
+   test:
+      mockmvc.print: default
+management:
+   endpoints.web.base-path: /secure/manager
+logging.level.org.apache.kafka: OFF

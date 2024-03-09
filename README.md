@@ -1,1 +1,1 @@
-# springboot-cqrs
+# spring-cqrs
