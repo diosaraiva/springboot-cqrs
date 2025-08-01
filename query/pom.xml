@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -17,7 +17,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>18</java.version>
-		<nxtlvl.version>0.0.1</nxtlvl.version>
+		<parent-lib.version>0.0.1</parent-lib.version>
 		<spring.version>2.7.7</spring.version>
 		<kafka.version>2.9.3</kafka.version>
 		<kafkaclients.version>3.3.1</kafkaclients.version>
@@ -29,8 +29,8 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.diosaraiva</groupId>
-			<artifactId>nxtlvl-lib</artifactId>
-			<version>${nxtlvl.version}</version>
+			<artifactId>parent-lib</artifactId>
+			<version>${parent-lib.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
